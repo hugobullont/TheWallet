@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 28-nov-2016 16:56:40 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Entities.Categories" table="categories" catalog="thewallet" optimistic-lock="version">
+        <id name="idCategory" type="java.lang.Integer">
+            <column name="idCategory" />
+            <generator class="identity" />
+        </id>
+        <property name="description" type="string">
+            <column name="description" length="100" not-null="true" />
+        </property>
+        <set name="transactionses" table="transactions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idCategory" not-null="true" />
+            </key>
+            <one-to-many class="Entities.Transactions" />
+        </set>
+    </class>
+</hibernate-mapping>
