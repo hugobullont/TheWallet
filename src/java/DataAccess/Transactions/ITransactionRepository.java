@@ -14,6 +14,6 @@ import java.util.List;
  */
 public interface ITransactionRepository {
     void AddTransaction(Transactions objTr);
-    List<Transactions> GetTransactionsPerMonth(int monthValue);
-    double GetBalancePerMonth(int monthValue);
+    List<Transactions> GetTransactionsPerMonth(int monthValue, int userId);
+    double GetBalancePerMonth(int monthValue, int userId);
 }

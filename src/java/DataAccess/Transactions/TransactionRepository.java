@@ -27,18 +27,18 @@ public class TransactionRepository implements ITransactionRepository {
     }
 
     @Override
-    public List<Transactions> GetTransactionsPerMonth(int monthValue) {
+    public List<Transactions> GetTransactionsPerMonth(int monthValue, int userId) {
        Session session = TheWalletHibernateUtil.getSessionFactory().openSession();
        session.beginTransaction();
-       List<Transactions> list = (List<Transactions>) session.createQuery("from Transactions as t where month(t.date) ="+monthValue).list();
+       List<Transactions> list = (List<Transactions>) session.createQuery("from Transactions as t where month(t.date) ="+monthValue + "and t.users.idUser ="+ userId).list();
        session.close();
        return list;
     }
 
     @Override
-    public double GetBalancePerMonth(int monthValue) {
+    public double GetBalancePerMonth(int monthValue, int userId) {
         double balance = 0;
-        List<Transactions> list = GetTransactionsPerMonth(monthValue);
+        List<Transactions> list = GetTransactionsPerMonth(monthValue, userId);
         for(Transactions temp : list)
         {
             BigDecimal bdV = temp.getValue();

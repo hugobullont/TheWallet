@@ -17,6 +17,14 @@
     
     <nav class="uk-navbar">
         <a href="index.jsp" class="uk-navbar-brand">TheWallet</a>
+        <div class="uk-navbar-flip">
+            <ul class="uk-navbar-nav">
+                <li><a href="">Login</a></li>
+            </ul>
+                <ul class="uk-navbar-nav">
+                <li><a href="">Register</a></li>
+            </ul>
+        </div>
     </nav>
     
     <body>
