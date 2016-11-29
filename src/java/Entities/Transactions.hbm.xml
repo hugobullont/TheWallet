@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 28-nov-2016 16:56:40 by Hibernate Tools 4.3.1 -->
+<!-- Generated 29-nov-2016 15:59:42 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="Entities.Transactions" table="transactions" catalog="thewallet" optimistic-lock="version">
         <id name="idTransaction" type="java.lang.Integer">
@@ -13,6 +13,9 @@
         </many-to-one>
         <many-to-one name="types" class="Entities.Types" fetch="select">
             <column name="idType" not-null="true" />
+        </many-to-one>
+        <many-to-one name="users" class="Entities.Users" fetch="select">
+            <column name="idUser" not-null="true" />
         </many-to-one>
         <property name="description" type="string">
             <column name="description" length="500" not-null="true" />

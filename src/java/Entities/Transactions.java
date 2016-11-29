@@ -1,5 +1,5 @@
 package Entities;
-// Generated 28-nov-2016 16:56:39 by Hibernate Tools 4.3.1
+// Generated 29-nov-2016 15:59:41 by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -14,6 +14,7 @@ public class Transactions  implements java.io.Serializable {
      private Integer idTransaction;
      private Categories categories;
      private Types types;
+     private Users users;
      private String description;
      private BigDecimal value;
      private Date date;
@@ -21,9 +22,10 @@ public class Transactions  implements java.io.Serializable {
     public Transactions() {
     }
 
-    public Transactions(Categories categories, Types types, String description, BigDecimal value, Date date) {
+    public Transactions(Categories categories, Types types, Users users, String description, BigDecimal value, Date date) {
        this.categories = categories;
        this.types = types;
+       this.users = users;
        this.description = description;
        this.value = value;
        this.date = date;
@@ -49,6 +51,13 @@ public class Transactions  implements java.io.Serializable {
     
     public void setTypes(Types types) {
         this.types = types;
+    }
+    public Users getUsers() {
+        return this.users;
+    }
+    
+    public void setUsers(Users users) {
+        this.users = users;
     }
     public String getDescription() {
         return this.description;

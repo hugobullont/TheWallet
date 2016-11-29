@@ -1,5 +1,5 @@
 package Entities;
-// Generated 28-nov-2016 16:56:39 by Hibernate Tools 4.3.1
+// Generated 29-nov-2016 15:59:41 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;

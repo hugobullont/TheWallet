@@ -9,9 +9,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>TheWallet</title>
+        <link rel="stylesheet" href="css/uikit.css" />
+        <script src="js/jquery.js"></script>
+        <script src="js/uikit.js"></script>
     </head>
+    
+    <nav class="uk-navbar">
+        <a href="index.jsp" class="uk-navbar-brand">TheWallet</a>
+    </nav>
+    
     <body>
-        <h1>Hello World!</h1>
+        
     </body>
 </html>
