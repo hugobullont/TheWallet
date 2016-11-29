@@ -38,7 +38,7 @@ Día 2 (29/11/2016): Empezando con el código y elección del Web Framework!
 
 * **Hugo Bullon** - *Student (?)* - [hugobullont](https://github.com/hugobullont)
 
-Mira también la lista de [contributors](https://github.com/hugobullont/TheWallet/contributors) para ver que otros usuarios participan del proyecto.
+Mira también la lista de [contributors](https://github.com/hugobullont/TheWallet/contributors) para ver otros usuarios que participan del proyecto.
 
 
 
