@@ -7,6 +7,7 @@ package DataAccess.Transactions;
 
 import Entities.Transactions;
 import Hibernate.TheWalletHibernateUtil;
+import java.math.BigDecimal;
 import java.util.List;
 import org.hibernate.Session;
 
@@ -40,9 +41,19 @@ public class TransactionRepository implements ITransactionRepository {
         List<Transactions> list = GetTransactionsPerMonth(monthValue);
         for(Transactions temp : list)
         {
-            double value=0;
+            BigDecimal bdV = temp.getValue();
+            double transV = Double.valueOf(bdV.toString());
             
-            
+            //Expenses
+            if(temp.getTypes().getIdType()==1)
+            {
+                balance = balance + (transV * -1);
+            }
+            //Incomes
+            if(temp.getTypes().getIdType()==2)
+            {
+                balance = balance + (transV);
+            }
         }
         return balance;
     }
