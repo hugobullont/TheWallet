@@ -30,8 +30,8 @@ Día 2 (29/11/2016): Empezando con el código y elección del Web Framework!
 ## Built With
 
 * [UIKit](https://getuikit.com/docs/documentation_get-started.html) - Web Framework
-* [Java](http://www.oracle.com/technetwork/es/java/javase/downloads/index.html) - Java!
-* [MySQL](http://dev.mysql.com/downloads/) - Mucho más fácil de instalar que SQLServer! 
+* [Java](http://www.oracle.com/technetwork/es/java/javase/downloads/index.html) - Java! <3
+* [MySQL](http://dev.mysql.com/downloads/) - Mucho más fácil de instalar que SQLServer! (Y es OpenSource!!) 
 
 
 ## Authors
