@@ -1,6 +1,6 @@
 <%-- 
-    Document   : login
-    Created on : 29-nov-2016, 19:19:05
+    Document   : resume
+    Created on : 29-nov-2016, 21:24:01
     Author     : Hugo
 --%>
 
@@ -14,19 +14,19 @@
         <script src="js/jquery.js"></script>
         <script src="js/uikit.js"></script>
     </head>
-    
     <nav class="uk-navbar">
-        <a href="index.jsp" class="uk-navbar-brand">TheWallet</a>
+        <a href="#" class="uk-navbar-brand">TheWallet</a>
         <div class="uk-navbar-flip">
             <ul class="uk-navbar-nav">
-                <li class="uk-active"><a href="#">Login</a></li>
-            </ul>
-                <ul class="uk-navbar-nav">
-                <li><a href="register.jsp">Register</a></li>
+                <li class="uk-navbar-content">Bienvenido, username</li>
             </ul>
         </div>
     </nav>
     <body>
-        <h1>Hello World!</h1>
+        <ul class="uk-tab" data-uk-tab>
+            <li><a href="newTransaction.jsp">Nueva Transacción</a></li>
+            <li  class="uk-active"><a href="resume.jsp">Resumen</a></li>
+            <li class="uk-disabled"><a href="">Pagar Servicios</a></li>
+        </ul>
     </body>
 </html>

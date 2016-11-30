@@ -1,7 +1,7 @@
 <%-- 
-    Document   : index
-    Created on : 29-nov-2016, 13:23:06
-    Author     : Usuario
+    Document   : login
+    Created on : 29-nov-2016, 19:19:05
+    Author     : Hugo
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -19,15 +19,99 @@
         <a href="index.jsp" class="uk-navbar-brand">TheWallet</a>
         <div class="uk-navbar-flip">
             <ul class="uk-navbar-nav">
-                <li><a href="login.jsp">Login</a></li>
+                <li class="uk-active"><a href="#">Login</a></li>
             </ul>
                 <ul class="uk-navbar-nav">
                 <li><a href="register.jsp">Register</a></li>
             </ul>
         </div>
     </nav>
-    
-    <body>
-        
+    <body background="resources/trama.jpg">
+        <div class="uk-grid">
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">
+                <div class="uk-panel-box">    
+                    <form class="uk-form uk-form-horizontal">
+                       <fieldset>
+                           <legend>Login</legend>
+                           <div class="uk-form-row">
+                               <label class="uk-form-label" for="">Usuario</label>
+                               <div class="uk-form-controls">
+                                   <input required type="text" placeholder="Usuario">
+                               </div>
+                           </div>
+                           <div class="uk-form-row">
+                               <label class="uk-form-label" for="">Contraeña</label>
+                               <div class="uk-form-controls">
+                                   <input required type="password" placeholder="Contraseña">
+                               </div>
+                           </div>
+                           </br>
+                           <div class="uk-form-row">
+                               <div class="uk-form-controls">
+                                   <button type="submit" class="uk-button">Login</button>
+                               </div>
+                           </div>
+                       </fieldset>
+                   </form>
+                </div>
+            </div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+            <div class="uk-width-1-3">&nbsp;</div>
+        </div>
     </body>
 </html>
