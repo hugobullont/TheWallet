@@ -13,7 +13,7 @@ Mi profesor de .NET y Java dijo que haría algo parecido, pero para escritorio u
 Java (sin Framework MVC) (Hibernate para la conexión a la BD)
 MySQL
 GlassFish Server
-UIKit (CSS)
+Materialize (CSS)
 ```
 
 
@@ -29,7 +29,7 @@ Día 2 (29/11/2016): Empezando con el código y elección del Web Framework!
 
 ## Built With
 
-* [UIKit](https://getuikit.com/docs/documentation_get-started.html) - Web Framework
+* [Materialize](http://materializecss.com/getting-started.html) - Web Framework
 * [Java](http://www.oracle.com/technetwork/es/java/javase/downloads/index.html) - Java! <3
 * [MySQL](http://dev.mysql.com/downloads/) - Mucho más fácil de instalar que SQLServer! (Y es OpenSource!!) 
 
