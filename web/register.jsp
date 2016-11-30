@@ -1,7 +1,7 @@
 <%-- 
-    Document   : index
-    Created on : 29-nov-2016, 13:23:06
-    Author     : Usuario
+    Document   : register
+    Created on : 29-nov-2016, 19:19:14
+    Author     : Hugo
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -22,12 +22,11 @@
                 <li><a href="login.jsp">Login</a></li>
             </ul>
                 <ul class="uk-navbar-nav">
-                <li><a href="register.jsp">Register</a></li>
+                <li class="uk-active"><a href="#">Register</a></li>
             </ul>
         </div>
     </nav>
-    
     <body>
-        
+        <h1>Hello World!</h1>
     </body>
 </html>
