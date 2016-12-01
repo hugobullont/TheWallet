@@ -35,10 +35,7 @@
           </div>
         </nav>
         
-        <div id="index-banner" class="parallax-container">
-          <div class="section no-pad-bot">
-            <div class="container">
-              <br><br>
+      
               <form class="col s12">
                 <div class="card white darken-1">
                       <div class="card-content black-text">
@@ -64,11 +61,7 @@
                       </div>
                 </div>
               </form>
-
-            </div>
-          </div>
-          <div class="parallax"><img src="resources/background1.jpg" alt="We love you!"></div>
-        </div>
+              
         
         
         
