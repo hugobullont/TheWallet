@@ -4,6 +4,7 @@
     Author     : Hugo
 --%>
 
+<%@page import="Entities.Users"%>
 <%@page import="Entities.Categories"%>
 <%@page import="java.util.List"%>
 <%@page import="Entities.Types"%>
@@ -16,6 +17,7 @@
 <% ITypeRepository typeRepo = new TypeRepository();%>
 <% List<Types> types = typeRepo.GetAllTypes();%>
 <% List<Categories> categories = catRepo.GetAllCategories();%>
+<% Users cUser = (Users)session.getAttribute("CurrentUser");%>
 <!DOCTYPE html>
 <html>
      <head>
@@ -33,7 +35,7 @@
           <div class="nav-wrapper container">
             <a id="logo-container" href="newTransaction.jsp" class="brand-logo white-text">TheWallet</a>
             <ul class="right hide-on-med-and-down">
-                <li><a  class="white-text" >Bienvenido, username</a></li>
+                <li><a  class="white-text" >Bienvenido, <%= cUser.getUsername()%></a></li>
               <li><a  class="white-text" href="index.jsp">Logout</a></li>
             </ul>
 

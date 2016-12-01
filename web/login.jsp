@@ -39,7 +39,7 @@
                 
             </div>
             <div class="col s4">
-              <form class="col s12 ">
+                <form class="col s12 " action="Session" method="POST">
                 <div class="card white darken-1">
                       <div class="card-content black-text">
                         <span class="card-title">Iniciar Sesión</span>
