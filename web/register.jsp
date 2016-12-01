@@ -17,7 +17,7 @@
         <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
-    <body>
+    <body  background="resources/trama.jpg">
         <nav class="teal" role="navigation">
           <div class="nav-wrapper container">
             <a id="logo-container" href="index.jsp" class="brand-logo white-text">TheWallet</a>
@@ -34,18 +34,41 @@
           </div>
         </nav>
         
-        <div id="index-banner" class="parallax-container">
-          <div class="section no-pad-bot">
-            <div class="container">
-              <br><br>
-              <div class="row center">
-                
-              </div>
-              <br><br>
-
+       <div class="row col s12">
+            <div class="col s4"></div>
+            <div class="col s4">
+              <form class="col s12 ">
+                <div class="card white darken-1">
+                      <div class="card-content black-text">
+                        <span class="card-title">Registrarse</span>
+                            <div class="row">
+                              <div class="input-field col s12">
+                                  <input name = "txtUsername" id="txtUsername" type="text" required>
+                                  <label for="txtUsername">Usuario</label>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="input-field col s12">
+                                  <input name="txtPassword" id="txtPassword" type="password" required>
+                                  <label for="txtPassword">Contraseña</label>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="input-field col s12">
+                                  <input name="txtPassword2" id="txtPassword2" type="password" required>
+                                  <label for="txtPassword2">Repetir Contraseña</label>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="card-action">
+                        <div class="row center">
+                              <i class="center btn-large waves-effect waves-light brown lighten-1 waves-input-wrapper" style=""><input type="submit" id="btnLogin" class="center-align waves-button-input" value="Registrarse" style=""></i>
+                        </div>
+                      </div>
+                </div>
+              </form>
             </div>
-          </div>
-          <div class="parallax"><img src="resources/background3.jpg" alt="We love you!"></div>
+            <div class="col s4"></div>
         </div>
         
         

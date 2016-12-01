@@ -18,7 +18,7 @@
         <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
-    <body>
+    <body background="resources/trama.jpg">
         <nav class="teal" role="navigation">
           <div class="nav-wrapper container">
             <a id="logo-container" href="index.jsp" class="brand-logo white-text">TheWallet</a>
@@ -34,9 +34,12 @@
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons white-text">menu</i></a>
           </div>
         </nav>
-        
-      
-              <form class="col s12">
+        <div class="row col s12">
+            <div class="col s4">
+                
+            </div>
+            <div class="col s4">
+              <form class="col s12 ">
                 <div class="card white darken-1">
                       <div class="card-content black-text">
                         <span class="card-title">Iniciar Sesión</span>
@@ -61,6 +64,13 @@
                       </div>
                 </div>
               </form>
+            </div>
+            <div class="col s4">
+                
+            </div>
+        </div>
+      
+              
               
         
         
