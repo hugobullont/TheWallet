@@ -4,6 +4,7 @@
     Author     : Hugo
 --%>
 
+<%@page import="DataAccess.Util.*"%>
 <%@page import="Entities.Users"%>
 <%@page import="Entities.Categories"%>
 <%@page import="java.util.List"%>
@@ -15,6 +16,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <% ICategoryRepository catRepo = new CategoryRepository();%>
 <% ITypeRepository typeRepo = new TypeRepository();%>
+<% IUtil util = new Util();%>
 <% List<Types> types = typeRepo.GetAllTypes();%>
 <% List<Categories> categories = catRepo.GetAllCategories();%>
 <% Users cUser = (Users)session.getAttribute("CurrentUser");%>
@@ -29,6 +31,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
     </head>
     <body background="resources/trama.jpg">
         <nav class="teal" role="navigation">
@@ -99,9 +102,9 @@
             <div class="col s4">
               <div class="card white darken-1">
                       <div class="card-content black-text">
-                        <span class="card-title">Resumen del Mes: Noviembre</span>
-
-                            
+                        <span class="card-title">Resumen del Mes: <%=util.getActualMonthName()%></span>
+                        <h5>Balance</h5>
+                        
                             
                       </div>
                       <div class="card-action">
