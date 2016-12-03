@@ -4,6 +4,8 @@
     Author     : Hugo
 --%>
 
+<%@page import="DataAccess.Transactions.TransactionRepository"%>
+<%@page import="DataAccess.Transactions.ITransactionRepository"%>
 <%@page import="DataAccess.Util.*"%>
 <%@page import="Entities.Users"%>
 <%@page import="Entities.Categories"%>
@@ -16,10 +18,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <% ICategoryRepository catRepo = new CategoryRepository();%>
 <% ITypeRepository typeRepo = new TypeRepository();%>
+<% ITransactionRepository transRepo = new TransactionRepository();%>
 <% IUtil util = new Util();%>
 <% List<Types> types = typeRepo.GetAllTypes();%>
 <% List<Categories> categories = catRepo.GetAllCategories();%>
 <% Users cUser = (Users)session.getAttribute("CurrentUser");%>
+<% double balance = transRepo.GetBalancePerMonth(util.getActualMonth(), cUser.getIdUser());%>
 <!DOCTYPE html>
 <html>
      <head>
@@ -52,7 +56,7 @@
         
         <div class="row col s12">
             <div class="col s4">
-                <form class="col s12 ">
+                <form class="col s12" action="Add" method="POST">
                 <div class="card white darken-1">
                       <div class="card-content black-text">
                         <span class="card-title">Nueva Transacción</span>
@@ -70,7 +74,7 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <select>
+                                <select name="slType" id="slType" required>
                                     <option value="" disabled selected>Selecciona un tipo...</option>
                                     <%for (Types temp:types){%>
                                     <option value="<%=temp.getIdType() %>"><%=temp.getDescription()%></option>
@@ -81,7 +85,7 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <select>
+                                <select name="slCategory" id="slCategory" required>
                                     <option value="" disabled selected>Selecciona una categoría...</option>
                                     <%for (Categories temp:categories){%>
                                     <option value="<%=temp.getIdCategory()%>"><%=temp.getDescription()%></option>
@@ -104,7 +108,12 @@
                       <div class="card-content black-text">
                         <span class="card-title">Resumen del Mes: <%=util.getActualMonthName()%></span>
                         <h5>Balance</h5>
-                        
+                        <%if (balance<0){%>
+                        <h4><font color="red"><%=balance%></font></h4>
+                        <%}%>
+                        <%if (transRepo.GetBalancePerMonth(util.getActualMonth(), cUser.getIdUser())>=0){%>
+                        <h4><font color="green"><%=balance%></font></h4>
+                        <%}%>
                             
                       </div>
                       <div class="card-action">

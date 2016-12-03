@@ -33,5 +33,12 @@ public class Util implements IUtil {
        }
         return name;
     }
+
+    @Override
+    public int getActualMonth() {
+        int month=0;
+        month=Calendar.getInstance().get(Calendar.MONTH) + 1;
+        return month;
+    }
     
 }

@@ -11,4 +11,5 @@ package DataAccess.Util;
  */
 public interface IUtil {
     String getActualMonthName();
+    int getActualMonth();
 }
