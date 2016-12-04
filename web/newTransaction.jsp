@@ -40,30 +40,26 @@
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawVisualization);
+      google.charts.setOnLoadCallback(drawChart);
 
-
-      function drawVisualization() {
-        // Some raw data (not necessarily accurate)
+      function drawChart() {
         var data = google.visualization.arrayToDataTable([
-         ['Month', 'Bolivia', 'Average'],
-         ['2004/05',  165,      165       ],
-         ['2005/06',  135,      135       ],
-         ['2006/07',  157,      157 ],
-         ['2007/08',  139,      139       ],
-         ['2008/09',  136,      136        ]
-      ]);
+          ['Mes', 'Balance'],
+          ['Enero',  1000],
+          ['Febrero',  1170],
+          ['Marzo',  660],
+          ['Abril',  1030]
+        ]);
 
-    var options = {
-      vAxis: {title: 'Balance'},
-      hAxis: {title: 'Mes'},
-      seriesType: 'bars',
-      series: {1: {type: 'line'}}
-    };
+        var options = {
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
 
-    var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
-    chart.draw(data, options);
-  }
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
     </script>
     </head>
     <body background="resources/trama.jpg">
@@ -154,7 +150,7 @@
                       <div class="card-content black-text">
                         <span class="card-title">Gráfica del Movimiento por Mes</span>
 
-                            <div id="chart_div" ></div>
+                            <div id="curve_chart" ></div>
                             
                       </div>
                 </div>
