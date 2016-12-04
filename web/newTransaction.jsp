@@ -39,26 +39,37 @@
         <!-- Graphics -->
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
+      google.charts.load('current', {'packages':['line']});
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Mes', 'Balance'],
-          ['Enero',  1000],
-          ['Febrero',  1170],
-          ['Marzo',  660],
-          ['Abril',  1030]
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Mes');
+        data.addColumn('number','Balance');
+        data.addRows([
+            [1,500],
+            [2,600],
+            [3,-100],
+            [4,300],
+            [5,500],
+            [6,200],
+            [7,-200],
+            [8,150],
+            [9,500],
+            [10,300],
+            [11,-400],
+            [12,500],
         ]);
 
-        var options = {
-          curveType: 'function',
-          legend: { position: 'bottom' }
+        var options={
+            chart: {
+                title: 'Balance por Mes'
+            }
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+        var chart = new google.charts.Line(document.getElementById('curve_chart'));
 
-        chart.draw(data, options);
+        chart.draw(data, google.charts.Line.convertOptions(options));
       }
     </script>
     </head>
