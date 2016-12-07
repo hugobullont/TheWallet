@@ -166,6 +166,17 @@
                       </div>
                 </div>
             </div>
+                        
+            <div class="col s4">
+                <div class="card white darken-1">
+                      <div class="card-content black-text">
+                        <span class="card-title">Gráfica del Movimiento por Mes</span>
+
+                            
+                            
+                      </div>
+                </div>
+            </div>
         </div>
         
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
