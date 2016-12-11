@@ -16,4 +16,6 @@ public interface ITransactionRepository {
     void AddTransaction(Transactions objTr);
     List<Transactions> GetTransactionsPerMonth(int monthValue, int userId);
     double GetBalancePerMonth(int monthValue, int userId);
+    double GetIncomes(int monthValue, int userId);
+    double GetExpenses(int monthValue, int userId);
 }

@@ -152,6 +152,10 @@
                         <h4><font color="green"><%=balance%></font></h4>
                         <%}%>
                             
+                        <h5>Total de Entradas</h5>
+                        <h4><font color="green">S/.<%=transRepo.GetIncomes(util.getActualMonth(), cUser.getIdUser())%></font></h4>
+                        <h5>Total de Salidas</h5>
+                        <h4><font color="red">S/.<%=transRepo.GetExpenses(util.getActualMonth(), cUser.getIdUser())%></font></h4>
                       </div>
                       
                 </div>
@@ -161,22 +165,13 @@
                       <div class="card-content black-text">
                         <span class="card-title">Gráfica del Movimiento por Mes</span>
 
-                            <div id="curve_chart" ></div>
+                            
                             
                       </div>
                 </div>
             </div>
                         
-            <div class="col s4">
-                <div class="card white darken-1">
-                      <div class="card-content black-text">
-                        <span class="card-title">Gráfica del Movimiento por Mes</span>
-
-                            
-                            
-                      </div>
-                </div>
-            </div>
+            
         </div>
         
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

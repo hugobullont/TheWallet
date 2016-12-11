@@ -57,5 +57,37 @@ public class TransactionRepository implements ITransactionRepository {
         }
         return balance;
     }
+
+    @Override
+    public double GetIncomes(int monthValue, int userId) {
+        double balance = 0;
+        List<Transactions> list = GetTransactionsPerMonth(monthValue, userId);
+        for (Transactions temp:list)
+        {
+            BigDecimal bdV = temp.getValue();
+            double transV = Double.valueOf(bdV.toString());
+            if (temp.getTypes().getIdType()==2)
+            {
+                balance = balance + (transV);
+            }
+        }
+        return balance;
+    }
+
+    @Override
+    public double GetExpenses(int monthValue, int userId) {
+        double balance = 0;
+        List<Transactions> list = GetTransactionsPerMonth(monthValue, userId);
+        for (Transactions temp:list)
+        {
+            BigDecimal bdV = temp.getValue();
+            double transV = Double.valueOf(bdV.toString());
+            if (temp.getTypes().getIdType()==1)
+            {
+                balance = balance + (transV);
+            }
+        }
+        return balance;
+    }
     
 }
