@@ -128,7 +128,7 @@
             <div class="col s4">
                 <div class="card white darken-1">
                       <div class="card-content black-text">
-                        <span class="card-title">Gráfica del Movimiento por Mes</span>
+                        <span class="card-title">Pagos de Servicios</span>
 
                             
                             
