@@ -27,6 +27,9 @@ Día 1 (28/11/2016): Desarrollo de la Base de Datos! (El Script está en el repo
 Día 2 (29/11/2016): Empezando con el código y elección del Web Framework!
 ```
 
+```
+Día 3 (10/12/2016): (TERMINARON LOS EXÁMENES FINALES) Se agregó el historial de transacciones por mes. Se está pensando en agregar un Pago de Servicios (??). 
+```
 ## Built With
 
 * [Materialize](http://materializecss.com/getting-started.html) - Web Framework
