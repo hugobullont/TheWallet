@@ -89,5 +89,14 @@ public class TransactionRepository implements ITransactionRepository {
         }
         return balance;
     }
+
+    @Override
+    public List<Transactions> GetAllTransactionsPerUser(int userId) {
+       Session session = TheWalletHibernateUtil.getSessionFactory().openSession();
+       session.beginTransaction();
+       List<Transactions> list = (List<Transactions>) session.createQuery("from Transactions as t where t.users.idUser ="+ userId).list();
+       session.close();
+       return list;
+    }
     
 }

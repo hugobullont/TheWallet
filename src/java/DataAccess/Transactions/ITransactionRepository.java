@@ -18,4 +18,5 @@ public interface ITransactionRepository {
     double GetBalancePerMonth(int monthValue, int userId);
     double GetIncomes(int monthValue, int userId);
     double GetExpenses(int monthValue, int userId);
+    List<Transactions> GetAllTransactionsPerUser(int userId);
 }

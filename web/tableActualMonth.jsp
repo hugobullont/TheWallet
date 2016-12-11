@@ -24,6 +24,7 @@
 <% List<Types> types = typeRepo.GetAllTypes();%>
 <% List<Categories> categories = catRepo.GetAllCategories();%>
 <% Users cUser = (Users)session.getAttribute("CurrentUser");%>
+<% List<Integer> months = util.getMonthsTrans(cUser.getIdUser());%>
 <% List<Transactions> transactions = transRepo.GetTransactionsPerMonth(util.getActualMonth(), cUser.getIdUser());%>
 <% double balance = transRepo.GetBalancePerMonth(util.getActualMonth(), cUser.getIdUser());%>
 <!DOCTYPE html>
@@ -56,7 +57,26 @@
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons white-text">menu</i></a>
           </div>
         </nav>
-              
+        
+        <div class="card white darken-1">
+            <div class="card-content black-text">
+                <form class="row col s12 valign-wrapper" action="MonthHistory" method="POST">
+                    <div class="input-field col s6">
+                        <select id="slMonth" name="slMonth">
+                          <option value="" disabled selected>Escoge un Mes</option>
+                          <%for (Integer temp : months){%>
+                          <option value="<%=temp%>"><%=util.getMonthName(temp)%></option>
+                          <%}%>
+                        </select>
+                    </div>
+                    <div class="col s4 valign-wrapper">
+                        <button class="btn  waves-effect waves-light" type="submit" name="btnSearch">Mostrar</button>
+                    </div>
+                </form>
+                            
+                            
+            </div>
+        </div>
               
         <div class="card white darken-1">
             <div class="card-content black-text">
@@ -117,4 +137,12 @@
             </div>
         </div>
     </body>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script>
+        $(document).ready(function() {
+    $('select').material_select();
+  });
+    </script>
+     <script src="js/init.js"></script>
 </html>

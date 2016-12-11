@@ -41,14 +41,14 @@
           <div class="nav-wrapper container">
             <a id="logo-container" href="newTransaction.jsp" class="brand-logo white-text">TheWallet</a>
             <ul class="right hide-on-med-and-down">
-                <li><a  class="white-text" href="tableMonth.jsp" >Historial Completo del Mes Actual</a></li>
+                <li><a  class="white-text" href="tableActualMonth.jsp" >Historial Completo por Mes</a></li>
                 <li><a  class="white-text" >Bienvenido, <%= cUser.getUsername()%></a></li>
               <li><a  class="white-text" href="index.jsp">Logout</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
               <li><a  class="white-text" >Bienvenido, <%= cUser.getUsername()%></a></li>
-              <li><a  class="white-text" href="tableMonth.jsp" >Historial Completo del Mes Actual</a></li>
+              <li><a  class="white-text" href="tableActualMonth.jsp" >Historial Completo por Mes</a></li>
               <li><a  class="white-text" href="index.jsp">Logout</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons white-text">menu</i></a>
@@ -129,7 +129,7 @@
                 <div class="card white darken-1">
                       <div class="card-content black-text">
                         <span class="card-title">Pago de Servicios</span>
-
+                         
                             
                             
                       </div>

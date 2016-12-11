@@ -5,6 +5,8 @@
  */
 package DataAccess.Util;
 
+import java.util.List;
+
 /**
  *
  * @author Hugo
@@ -12,4 +14,6 @@ package DataAccess.Util;
 public interface IUtil {
     String getActualMonthName();
     int getActualMonth();
+    List<Integer> getMonthsTrans(int userId);
+    String getMonthName(int monthValue);
 }
