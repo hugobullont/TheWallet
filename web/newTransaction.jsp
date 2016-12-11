@@ -35,56 +35,21 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        
-        <!-- Graphics -->
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['line']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('number', 'Mes');
-        data.addColumn('number','Balance');
-        data.addRows([
-            [1,500],
-            [2,600],
-            [3,-100],
-            [4,300],
-            [5,500],
-            [6,200],
-            [7,-200],
-            [8,150],
-            [9,500],
-            [10,300],
-            [11,-400],
-            [12,500],
-        ]);
-
-        var options={
-            chart: {
-                title: 'Balance por Mes'
-            }
-        };
-
-        var chart = new google.charts.Line(document.getElementById('curve_chart'));
-
-        chart.draw(data, google.charts.Line.convertOptions(options));
-      }
-    </script>
     </head>
     <body background="resources/trama.jpg">
         <nav class="teal" role="navigation">
           <div class="nav-wrapper container">
             <a id="logo-container" href="newTransaction.jsp" class="brand-logo white-text">TheWallet</a>
             <ul class="right hide-on-med-and-down">
+                <li><a  class="white-text" href="tableMonth.jsp" >Historial Completo del Mes</a></li>
                 <li><a  class="white-text" >Bienvenido, <%= cUser.getUsername()%></a></li>
               <li><a  class="white-text" href="index.jsp">Logout</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
-              <li><a href="login.jsp">Iniciar Sesión</a></li>
-              <li><a href="register.jsp">Registrarse</a></li>
+              <li><a  class="white-text" >Bienvenido, <%= cUser.getUsername()%></a></li>
+              <li><a  class="white-text" href="tableMonth.jsp" >Historial Completo del Mes</a></li>
+              <li><a  class="white-text" href="index.jsp">Logout</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons white-text">menu</i></a>
           </div>
