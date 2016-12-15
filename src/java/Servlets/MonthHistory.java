@@ -8,6 +8,7 @@ package Servlets;
 import Entities.Users;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Calendar;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -79,6 +80,7 @@ public class MonthHistory extends HttpServlet {
        RequestDispatcher rdMonth = request.getRequestDispatcher("tableMonthSelected.jsp");
        Users cUser = (Users)session.getAttribute("CurrentUser");
        String monthString = request.getParameter("slMonth");
+       if (monthString == null){monthString= String.valueOf(Calendar.getInstance().get(Calendar.MONTH));}
        int monthValue = Integer.valueOf(monthString);
        session.setAttribute("MonthRequest", monthValue);
        response.sendRedirect("tableMonthSelected.jsp");
